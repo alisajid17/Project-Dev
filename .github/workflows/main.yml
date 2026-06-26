@@ -1,0 +1,33 @@
+name: Google Homepage CI
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-website:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display Repository Files
+        run: ls -la
+
+      - name: Verify index.html Exists
+        run: |
+          if [ -f index.html ]; then
+            echo "✅ index.html found"
+          else
+            echo "❌ index.html not found"
+            exit 1
+          fi
+
+      - name: Workflow Completed
+        run: echo "🎉 Google Homepage project passed GitHub Actions!"
