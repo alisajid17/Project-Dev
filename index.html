@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Search Clone</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#ffffff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.container{
+    text-align:center;
+}
+
+.logo{
+    font-size:60px;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+.blue{color:#4285F4;}
+.red{color:#EA4335;}
+.yellow{color:#FBBC05;}
+.green{color:#34A853;}
+
+.search-box{
+    width:600px;
+    max-width:90%;
+    padding:15px 20px;
+    border:1px solid #dcdcdc;
+    border-radius:30px;
+    font-size:18px;
+    outline:none;
+    box-shadow:0 2px 5px rgba(0,0,0,.15);
+}
+
+.search-box:hover{
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    border-radius:5px;
+    background:#f8f9fa;
+    cursor:pointer;
+    font-size:15px;
+}
+
+button:hover{
+    border:1px solid #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+<span class="blue">G</span>
+<span class="red">o</span>
+<span class="yellow">o</span>
+<span class="blue">g</span>
+<span class="green">l</span>
+<span class="red">e</span>
+</div>
+
+<form action="https://www.google.com/search" method="GET">
+
+<input
+type="text"
+name="q"
+class="search-box"
+placeholder="Search Google">
+
+<div class="buttons">
+<button type="submit">Google Search</button>
+<button type="button" onclick="alert('Feeling Lucky!')">
+I'm Feeling Lucky
+</button>
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>
